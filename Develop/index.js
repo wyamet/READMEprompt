@@ -43,10 +43,32 @@ async function generateReadme() {
       message: "Please provide contribution guidelines for your project:",
     },
     {
+        type: "input",
+        name: "license",
+        message: "What License does your project use?",
+      },
+    {
       type: "input",
       name: "testInstructions",
       message: "Please provide test instructions for your project:",
     },
+    {
+        type: "input",
+        name: "colaborators",
+        message: "Please provide the names of the Collaborators for your project:",
+      },
+      {
+        type: "input",
+        name: "thirdPartyContributers",
+        message: "Please provide the names of any 3rd parties used for your project:",
+      },
+      {
+        type: "input",
+        name: "outSideHelp",
+        message: "Please provide any outside resources used for your project:",
+      },
+      
+      
   ];
   //Asks the user every question
   const answers = await inquirer.prompt(questions);
@@ -64,6 +86,8 @@ ${answers.description}
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
+- [Testing](#Testing)
+- [Questions](#questions)
 
 ## Installation
 
@@ -81,11 +105,29 @@ ${answers.contributionGuidelines}
 
 ## Testing
 
-${answers.testInstructions}`;
+${answers.testInstructions}
+
+## License
+
+${answers.license}
+
+## Questions
+
+## Credits
+
+${answers.colaborators}
+${answers.thirdPartyContributers}
+${answers.outSideHelp}
+`;}
+
+
+
+
+
 
   // TODO: Create a function to write README file
   fs.writeFileSync("README.md", readme);
-}
+
 
 // start the function
 generateReadme();
