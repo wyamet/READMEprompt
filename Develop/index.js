@@ -115,9 +115,9 @@ ${answers.license}
 
 ## Credits
 
-${answers.colaborators}
-${answers.thirdPartyContributers}
-${answers.outSideHelp}
+- ${answers.colaborators}
+- ${answers.thirdPartyContributers}
+- ${answers.outSideHelp}
 `;
 
 
