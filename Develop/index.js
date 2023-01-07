@@ -45,6 +45,48 @@ async function generateReadme() {
           message: 'Please provide test instructions for your project:'
         },
       ];
+//Asks the user every question
+  const answers = await inquirer.prompt(questions);
+
+// plug in the answers to the README file.
+const readme = `
+# ${answers.projectName}
+
+${answers.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+${answers.installationStep1}
+${answers.installationStep2}
+${answers.installationStep3}
+
+## Usage
+
+${answers.usageInstructions}
+
+## Contributing
+
+${answers.contributionGuidelines}
+
+## Testing
+
+${answers.testInstructions}`;
+
+// Write the README file
+  fs.writeFileSync('README.md', readme);
+}
+
+// start the function
+generateReadme();
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
