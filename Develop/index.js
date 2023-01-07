@@ -81,10 +81,11 @@ ${answers.contributionGuidelines}
 ${answers.testInstructions}`;
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+fs.writeFileSync('README.md', readme);
+    }
 
 // TODO: Create a function to initialize app
-function init() {}
+generateReadme();
 
 // Function call to initialize app
 init();
