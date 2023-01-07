@@ -84,8 +84,7 @@ ${answers.testInstructions}`;
 fs.writeFileSync('README.md', readme);
     }
 
-// TODO: Create a function to initialize app
-generateReadme();
+
 
 // Function call to initialize app
 init();
