@@ -118,7 +118,7 @@ ${answers.license}
 ${answers.colaborators}
 ${answers.thirdPartyContributers}
 ${answers.outSideHelp}
-`;}
+`;
 
 
 
@@ -128,6 +128,6 @@ ${answers.outSideHelp}
   // TODO: Create a function to write README file
   fs.writeFileSync("README.md", readme);
 
-
+}
 // start the function
 generateReadme();
