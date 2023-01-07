@@ -80,14 +80,6 @@ ${answers.contributionGuidelines}
 
 ${answers.testInstructions}`;
 
-// Write the README file
-  fs.writeFileSync('README.md', readme);
-}
-
-// start the function
-generateReadme();
-
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
