@@ -1,9 +1,13 @@
 // TODO: Include packages needed for this application
+
 const inquirer = require("inquirer");
 const fs = require("fs");
+
 // TODO: Create an array of questions for user input
+
 async function generateReadme() {
-  const questions = [
+  
+    const questions = [
     {
       type: "input",
       name: "projectName",
@@ -70,7 +74,7 @@ async function generateReadme() {
       
       
   ];
-  //Asks the user every question
+  //asks each question before continuing.
   const answers = await inquirer.prompt(questions);
 
   // plug in the answers to the README file.
